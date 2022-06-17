@@ -1,3 +1,11 @@
+<?php
+    include_once ("database.php");
+
+    $query = $db->prepare("SELECT * FROM categories");
+    $query->execute();
+    $result = $query->fetchALL (PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -40,18 +48,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     Categories
                 </p>
                 <div class="row">
-                    <div class="col-3">
-                        <a href="roeitrainers.php"><img src="img/roeitrainers/roeitrainer.png" class="border border-black mx-auto p-5"></a>
-                    </div>
-                    <div class="col-3">
-                        <a href="crosstrainers.php"><img src="img/crosstrainers/crosstrainer.png" class="border border-black mx-auto p-5"></a>
-                    </div>
-                    <div class="col-3">
-                        <a href="hometrainers.php"><img src="img/hometrainers/hometrainer.png" class="border border-black mx-auto p-5"></a>
-                    </div>
-                    <div class="col-3">
-                        <a href="loopbanden.php"><img src="img/loopbanden/loopband.png" class="border border-black mx-auto p-5"></a>
-                    </div>
+                    <?php
+                        foreach($result as &$category) {
+                    ?>
+                        <div class="col-3">
+                            <a href="<?=$category["link"]?>"><img src="img/<?= $category['image'];?>" class="border border-black mx-auto p-5"></a>
+                        </div>
+                    <?php
+                        }
+                    ?>
+
+<!--                    <div class="col-3">-->
+<!--                        <a href="crosstrainers.php"><img src="img/crosstrainers/crosstrainer.png" class="border border-black mx-auto p-5"></a>-->
+<!--                    </div>-->
+<!--                    <div class="col-3">-->
+<!--                        <a href="hometrainers.php"><img src="img/hometrainers/hometrainer.png" class="border border-black mx-auto p-5"></a>-->
+<!--                    </div>-->
+<!--                    <div class="col-3">-->
+<!--                        <a href="loopbanden.php"><img src="img/loopbanden/loopband.png" class="border border-black mx-auto p-5"></a>-->
+<!--                    </div>-->
                 </div>
             </div>
             <?php
