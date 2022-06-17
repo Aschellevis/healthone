@@ -20,6 +20,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 margin-left: 20px;
                 margin-right: 20px;
             }
+            
+            img {
+                width: 100%;
+            }
         </style>
     </head>
     <body>
@@ -29,18 +33,31 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 include("components/navigation.php");
                 include("components/banner.php");
             ?>
-            <h2 class="px-1 pt-5">
-                SportCenter HealthOne
-            </h2>
-            <p class="px-1">
-                Fit en gezond zijn is geen vanzelfsprekendheid. We moeten er zelf wat voor doen. Goede, gezonde voeding is 
-                hiervoor de basis. Bewegen hoort hier ook bij. Regelmatig bewegen zorgt voor een goede doorbloeding en draagt
-                bij aan ontspanning van lichaam en geest. Sporten is goed voor sterkere spieren en voor de conditie. Sportcenter
-                HealtOne heeft verschillende sportapparaten om mee te kunnen werken aan je conditie.
-            </p>
+            <div class="container-fluid">
+                <p class="pt-5">
+                    <a href="index.php">Home</a>
+                    /
+                    Categories
+                </p>
+                <div class="row">
+                    <div class="col-3">
+                        <a href="roeitrainers.php"><img src="img/roeitrainers/roeitrainer.png" class="border border-black mx-auto p-5"></a>
+                    </div>
+                    <div class="col-3">
+                        <a href="crosstrainers.php"><img src="img/crosstrainers/crosstrainer.png" class="border border-black mx-auto p-5"></a>
+                    </div>
+                    <div class="col-3">
+                        <a href="hometrainers.php"><img src="img/hometrainers/hometrainer.png" class="border border-black mx-auto p-5"></a>
+                    </div>
+                    <div class="col-3">
+                        <a href="loopbanden.php"><img src="img/loopbanden/loopband.png" class="border border-black mx-auto p-5"></a>
+                    </div>
+                </div>
+            </div>
             <?php
                 include("components/footer.php");
             ?>
          </div>
     </body>
 </html>
+
