@@ -65,8 +65,8 @@ include("components/head.php");
             </tr>
         </tbody>
     </table>
-    <a href="change_user_profile.php"><button type="button" class="btn btn-success px-4">profiel aanpassen</button></a>
-    <a href="#"><button type="button" class="btn btn-danger px-4">wachtwoord aanpassen</button></a>
+    <a href="change_user_profile.php"><button type="button" class="btn btn-success px-4">Profiel aanpassen</button></a>
+    <a href="change_user_password.php"><button type="button" class="btn btn-danger px-4">Wachtwoord aanpassen</button></a>
     <?php
     include("components/footer.php");
     ?>

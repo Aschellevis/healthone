@@ -1,3 +1,11 @@
+<?php
+include_once ("database.php");
+
+$query = $db->prepare("SELECT * FROM categories");
+$query->execute();
+$result = $query->fetchALL (PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license

@@ -31,7 +31,7 @@ include("components/head.php");
             <input type="name" class="form-control" id="inputName4">
         </div>
         <div class="col-md-6">
-            <label for="inputName4" class="form-label">Category</label>
+            <label for="inputName4" class="form-label">Categorie</label>
             <select class="form-select" aria-label="Default select example">
                 <option selected>Kies een categorie</option>
                 <?php
@@ -48,11 +48,11 @@ include("components/head.php");
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <div class="input-group col-md-12">
-            <label for="inputGroupFile04" class="form-label">Image bij sportapparaat</label>
+            <label for="inputGroupFile04" class="form-label">Foto bij sportapparaat</label>
             <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
         </div>
         <div class="col-12">
-            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="submit" class="btn btn-primary">Toevoegen</button>
         </div>
     </form>
     <?php

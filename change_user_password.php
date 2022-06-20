@@ -4,7 +4,6 @@ include_once ("database.php");
 $query = $db->prepare("SELECT * FROM users");
 $query->execute();
 $result = $query->fetchALL (PDO::FETCH_ASSOC);
-
 ?>
 
 <!DOCTYPE html>
@@ -34,19 +33,19 @@ include("components/head.php");
     ?>
     <form class="row g-3 px-1 my-4">
         <div class="col-md-12">
-            <label for="inputEmail4" class="form-label">E-mailadres</label>
-            <input type="email" class="form-control" id="inputEmail4" name="email">
+            <label for="inputPassword4" class="form-label">Huidige wachtwoord</label>
+            <input type="password" class="form-control" id="inputPassword4">
         </div>
-        <div class="col-md-6">
-            <label for="inputFirstName4" class="form-label">Voornaam</label>
-            <input type="name" class="form-control" id="inputFirstName4" name="firstname">
+        <div class="col-md-12">
+            <label for="inputPassword4" class="form-label">Nieuw wachtwoord</label>
+            <input type="password" class="form-control" id="inputPassword4">
         </div>
-        <div class="col-md-6">
-            <label for="inputLastName4" class="form-label">Achternaam</label>
-            <input type="name" class="form-control" id="inputLastName4" name="lastname">
+        <div class="col-md-12">
+            <label for="inputPassword4" class="form-label">Herhaal wachtwoord</label>
+            <input type="password" class="form-control" id="inputPassword4">
         </div>
         <div class="col-12">
-            <a href="logged_in.php"><button type="button" class="btn btn-primary" name="send">Profiel aanpassen</button></a>
+            <a href="logged_in.php"><button type="button" class="btn btn-primary">Wachtwoord aanpassen</button></a>
         </div>
     </form>
     <?php

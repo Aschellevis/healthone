@@ -28,7 +28,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <a class="nav-link text-black-50" href="register.php">registreren</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-black-50" href="admin_logged_in.php">contact</a>
+                    <a class="nav-link text-black-50" href="contact.php">contact</a>
                   </li>
                 </ul>
                 <li class="nav-item">

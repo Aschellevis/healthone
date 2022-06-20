@@ -29,8 +29,8 @@ include("components/head.php");
         <thead>
         <tr>
             <th scope="col">nr</th>
-            <th scope="col">Name</th>
-            <th scope="col">Category</th>
+            <th scope="col">Naam</th>
+            <th scope="col">Categorie</th>
             <th scope="col">Aanpassen</th>
             <th scope="col">Verwijderen</th>
         </tr>
