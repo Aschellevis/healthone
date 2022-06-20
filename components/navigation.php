@@ -22,17 +22,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
               <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link text-black-50" href="./categories.php">sportapparaat</a>
+                    <a class="nav-link text-black-50" href="categories.php">sportapparaat</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-black-50" href="#">registreren</a>
+                    <a class="nav-link text-black-50" href="register.php">registreren</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-black-50" href="#">contact</a>
+                    <a class="nav-link text-black-50" href="admin_logged_in.php">contact</a>
                   </li>
                 </ul>
                 <li class="nav-item">
-                    <a class="nav-link text-black-50" href="#">inloggen</a>
+                    <a class="nav-link text-black-50" href="login.php">inloggen</a>
                  </li>
               </div>
             </div>
