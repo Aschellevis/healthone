@@ -1,3 +1,11 @@
+<?php
+include_once ("database.php");
+
+$query = $db->prepare("SELECT * FROM products");
+$query->execute();
+$result = $query->fetchALL (PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -44,24 +52,21 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     Roeitrainer
                 </p>
                 <div class="row">
-                    <div class="col-2 border border-black rounded">
-                        <a href="roeitrainers/roeitrainer1.php"><img src="img/roeitrainers/roeitrainer1.png" class="m-3"></a>
+                    <?php
+                    foreach($result as &$product) {
+                    ?>
+                    <div class="col-2">
+                        <div class="card border border-black rounded ">
+                            <img src="img/<?= $product['image'];?>" class="mx-auto p-5">
+                            <div class="card-body">
+                                <h5 class="card-title text-center"><?=$product["name"]?></h5>
+                                <a href="<?=$product["link"]?>" class="btn stretched-link"></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-2 border border-black rounded">
-                        <a href="roeitrainers/roeitrainer2.php"><img src="img/roeitrainers/roeitrainer2.png" class="m-3"></a>
-                    </div>
-                    <div class="col-2 border border-black rounded">
-                        <a href="roeitrainers/roeitrainer3.php"><img src="img/roeitrainers/roeitrainer3.png" class="m-3"></a>
-                    </div>
-                    <div class="col-2 border border-black rounded">
-                        <a href="roeitrainers/roeitrainer4.php"><img src="img/roeitrainers/roeitrainer4.png" class="m-3"></a>
-                    </div>
-                    <div class="col-2 border border-black rounded">
-                        <a href="roeitrainers/roeitrainer5.php"><img src="img/roeitrainers/roeitrainer5.png" class="m-3"></a>
-                    </div>
-                    <div class="col-2 border border-black rounded">
-                        <a href="roeitrainers/roeitrainer6.php"><img src="img/roeitrainers/roeitrainer6.png" class="m-3"></a>
-                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
             <?php
