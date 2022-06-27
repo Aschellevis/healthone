@@ -33,8 +33,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         foreach($result as &$category) {
                     ?>
                         <div class="col-3 categories">
-                            <div class="card border border-black rounded ">
-                                <img src="img/<?= $category['image'];?>" class="mx-auto p-5">
+                            <div class="card border border-black rounded">
+                                <img src="img/<?= $category['image'];?>" class="mx-auto p-5" width="100%">
                                 <div class="card-body">
                                     <h5 class="card-title text-center"><?=$category["name"]?></h5>
                                     <a href="<?=$category["link"]?>" class="btn stretched-link"></a>

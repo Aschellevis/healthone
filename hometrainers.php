@@ -1,7 +1,7 @@
 <?php
 include_once ("database.php");
 
-$query = $db->prepare("SELECT * FROM products WHERE id=3");
+$query = $db->prepare("SELECT * FROM products WHERE category_id=3 ORDER BY id");
 $query->execute();
 $result = $query->fetchALL (PDO::FETCH_ASSOC);
 ?>
@@ -30,8 +30,8 @@ $result = $query->fetchALL (PDO::FETCH_ASSOC);
                     foreach($result as &$product) {
                         ?>
                         <div class="col-2">
-                            <div class="card border border-black rounded ">
-                                <img src="img/<?= $product['image'];?>" class="mx-auto p-5" width="100%">
+                            <div class="card border border-black rounded h-100">
+                                <img src="img/<?= $product['image'];?>" class="mx-auto p-5 h-100" width="100%">
                                 <div class="card-body">
                                     <h5 class="card-title text-center"><?=$product["name"]?></h5>
                                     <a href="<?=$product["link"]?>" class="btn stretched-link"></a>
