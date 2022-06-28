@@ -46,14 +46,7 @@ include("../components/head.php");
             }
             ?>
         </div>
-        <ul class="nav nav-tabs my-4">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#home" aria-controls="home">Reviews</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#new" aria-controls="new">Maak je eigen review</a>
-            </li>
-        </ul>
+        <h2 class="py-3">Reviews</h2>
         <table class="table border border-black">
             <thead>
             <tr>
@@ -78,6 +71,9 @@ include("../components/head.php");
             ?>
             </tbody>
         </table>
+        <?php
+        include("../components/new_review.php");
+        ?>
         <?php
         include("../components/footer.php");
         ?>
