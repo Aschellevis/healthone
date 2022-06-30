@@ -1,6 +1,9 @@
 <?php
 include_once ("database.php");
 
+//roeitrainers.php?id=1
+echo $_GET['id'];
+
 $query = $db->prepare("SELECT * FROM products WHERE category_id=1 ORDER BY id");
 $query->execute();
 $result = $query->fetchALL (PDO::FETCH_ASSOC);
