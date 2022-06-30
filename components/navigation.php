@@ -31,7 +31,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <a class="nav-link text-black-50" href="contact.php">contact</a>
                   </li>
                 </ul>
-                <li class="nav-item">
+                <li class="nav-item" style="list-style: none;">
                     <a class="nav-link text-black-50" href="login.php">inloggen</a>
                  </li>
               </div>

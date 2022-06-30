@@ -2,7 +2,6 @@
 include_once ("../database.php");
 
 $query = $db->prepare("SELECT * FROM products WHERE id=24");
-$query = $db->prepare("SELECT * FROM reviews");
 $query->execute();
 $result = $query->fetchALL (PDO::FETCH_ASSOC);
 ?>
@@ -20,7 +19,7 @@ include("../components/head.php");
 <div class="m-3">
     <?php
     include("../components/header.php");
-    include("../components/navigation.php");
+    include("../components/navigation_equipment.php");
     include("../components/banner_equipment.php");
     ?>
     <div class="container-fluid">
@@ -46,35 +45,9 @@ include("../components/head.php");
             }
             ?>
         </div>
-        <h2 class="py-3">Reviews</h2>
-        <table class="table border border-black">
-            <thead>
-            <tr>
-                <th scope="col">Rating</th>
-                <th scope="col">Review</th>
-                <th scope="col">Datum</th>
-                <th scope="col">Tijd</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            foreach($result as &$review) {
-                ?>
-                <tr>
-                    <th><?=$review['rating'];?></th>
-                    <td><?=$review['description'];?></td>
-                    <td><?=$review['date'];?></td>
-                    <td>@<?=$review['time'];?></td>
-                </tr>
-                <?php
-            }
-            ?>
-            </tbody>
-        </table>
         <?php
+        include ("../components/review.php");
         include("../components/new_review.php");
-        ?>
-        <?php
         include("../components/footer.php");
         ?>
     </div>

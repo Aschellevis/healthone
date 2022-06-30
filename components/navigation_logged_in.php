@@ -35,7 +35,7 @@ $result = $query->fetchALL (PDO::FETCH_ASSOC);
                 <?php
                 foreach($result as &$user) {
                 ?>
-                <li class="nav-item">
+                <li class="nav-item" style="list-style: none;">
                     <a class="nav-link text-black-50" href="#"><?=$user["first name"]?>uitloggen (member)</a>
                 </li>
                 <?php

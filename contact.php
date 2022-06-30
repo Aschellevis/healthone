@@ -22,6 +22,7 @@ include("components/head.php");
             <p class="px-1">
                 Je kan ons vinden in Den Haag op Tinwerf 16.
             </p>
+            <br>
             <h3>
                 Liever een belletje plegen?
             </h3>

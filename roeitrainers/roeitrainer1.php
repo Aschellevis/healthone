@@ -1,9 +1,9 @@
 <?php
-include_once ("../database.php");
+    include_once ("../database.php");
 
-$query = $db->prepare("SELECT * FROM products WHERE id=1");
-$query->execute();
-$result = $query->fetchALL (PDO::FETCH_ASSOC);
+    $query = $db->prepare("SELECT * FROM products WHERE id='1'");
+    $query->execute();
+    $result = $query->fetchALL (PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ include("../components/head.php");
 <div class="m-3">
     <?php
     include("../components/header.php");
-    include("../components/navigation.php");
+    include("../components/navigation_equipment.php");
     include("../components/banner_equipment.php");
     ?>
     <div class="container-fluid">

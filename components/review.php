@@ -1,6 +1,5 @@
 <?php
-$reviews = $db->prepare("SELECT * FROM `reviews` WHERE product_id = :id");
-$reviews->bindParam("id", $_GET['id']);
+$reviews = $db->prepare("SELECT * FROM `reviews`");
 $reviews->execute();
 $result = $reviews->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -12,7 +11,6 @@ $result = $reviews->fetchAll(PDO::FETCH_ASSOC);
         <th scope="col">Rating</th>
         <th scope="col">Review</th>
         <th scope="col">Datum</th>
-        <th scope="col">Tijd</th>
     </tr>
     </thead>
     <tbody>
@@ -20,10 +18,39 @@ $result = $reviews->fetchAll(PDO::FETCH_ASSOC);
     foreach($result as &$review) {
         ?>
         <tr>
-            <th><?=$review['rating'];?></th>
+            <?php
+            if ($review['rating'] == 1) {
+                echo '<th><i class="bi bi-star-fill text-warning"></i></th>';
+            } else if ($review['rating'] == 2) {
+                echo '<th>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                      </th>';
+            } else if ($review['rating'] == 3) {
+                echo '<th>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                      </th>';
+            } else if ($review['rating'] == 4) {
+                echo '<th>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                      </th>';
+            } else {
+                echo '<th>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                      </th>';
+            }
+            ?>
             <td><?=$review['description'];?></td>
             <td><?=$review['date'];?></td>
-            <td>@<?=$review['time'];?></td>
         </tr>
         <?php
     }
